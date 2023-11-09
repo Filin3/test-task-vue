@@ -1,30 +1,40 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <nav class="nav">
+    <div class="nav__item">
+      <router-link to="/">Home</router-link>
+    </div>
+    <div class="nav__item">
+      <router-link to="/user">User</router-link>
+    </div>
   </nav>
-  <router-view/>
+  <router-view />
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+.nav {
+  background-color: rgb(3, 168, 163);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
-nav {
-  padding: 30px;
+.nav__item {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
 
   a {
+    text-decoration: none;
     font-weight: bold;
-    color: #2c3e50;
+    color: white;
+    padding: 5px;
+  }
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+  &:has(a.router-link-exact-active) {
+    border-bottom: 5px solid white;
   }
 }
 </style>

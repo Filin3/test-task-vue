@@ -1,0 +1,35 @@
+body,
+h3,
+p {
+  margin: 0;
+}
+
+input {
+  outline: none;
+  border: none;
+  height: 20px;
+}
+
+#app {
+  width: 100dvw;
+  height: 100dvh;
+  background: linear-gradient(
+    180deg,
+    rgb(174, 255, 251) 0%,
+    rgb(255, 255, 255) 100%
+  );
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  border: 1px solid black;
+  background-color: rgb(174, 255, 251);
+  height: 2rem;
+  border-radius: 0.5rem;
+  transition-duration: 0.1s;
+
+  &:hover {
+    box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 50%);
+  }
+}
